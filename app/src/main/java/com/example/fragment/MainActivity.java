@@ -22,14 +22,21 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment = null;
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
+                    fragment = new HomeFragment();
+//                    mTextMessage.setText(R.string.title_home);
+                    break;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
+                    fragment = new DashboardFragment();
+//                    mTextMessage.setText(R.string.title_dashboard);
+                    break;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
+                    fragment = new NotificationsFragment();
+//                    mTextMessage.setText(R.string.title_notifications);
+                    break;
+                case R.id.navigation_profile:
+                    fragment = new ProfileFragment();
+//                    mTextMessage.setText(R.string.title_notifications);
+                    break;
             }
             return loadFragement(fragment);
         }
